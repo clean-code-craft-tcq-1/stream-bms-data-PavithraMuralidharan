@@ -1,16 +1,17 @@
+# returns minimum value from list of bms data parameter
 def bms_param_min(bms_param_data):
     if len(bms_param_data) !=0:
         return round(min(bms_param_data),3)
     return "Data not available"
 
-
+# returns maximum value from list of bms data parameter
 def bms_param_max(bms_param_data):
     if len(bms_param_data) != 0:
         return round(max(bms_param_data), 3)
     return "Data not available"
 
 
-
+# report the statistics of bms data stream received from sender
 def displayOutput(bms_data):
     bms_temperature_list = bms_data[0]
     bms_soc_list = bms_data[1]
@@ -30,7 +31,7 @@ def displayOutput(bms_data):
     return 'Success'
 
 
-
+# returns moving average of last 5 values in bms parameter list
 def moving_average_last_5(bms_param_data):
     length = len(bms_param_data)
     if length >= 5:
