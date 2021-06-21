@@ -3,7 +3,7 @@ import sys
 import ast
 import pandas as pd
 
-def bms_stream_formatting():
+def bms_format_console_pipeline():
     data = sys.stdin.readlines()
     input_data = ''
     
