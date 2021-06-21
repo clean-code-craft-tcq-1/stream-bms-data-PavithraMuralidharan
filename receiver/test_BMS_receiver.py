@@ -1,5 +1,4 @@
 import unittest
-import bms_stream_formatter
 import bms_stream_reporter
 from bms_stream_formatter import bms_format_console_pipeline
 
@@ -31,10 +30,6 @@ class test_bms_receiver(unittest.TestCase):
         self.assertFalse(bms_moving_average == 7.5)
         bms_moving_average = bms_stream_reporter.bms_moving_average_last_5([5, 6.5, 2, 3,8,9.5])
         self.assertTrue(bms_moving_average == 5.8)
-    
-    #Test if pipeline integration of console output of sender to receiver
-    def test_pipeline_integration(self):
-        self.assertTrue(bms_format_console_pipeline() != 'Pipeline Integration Failed ')
         
     # test if bms parameter statistics report is printed successfully
     def test_bms_statistics_reporting(self):
